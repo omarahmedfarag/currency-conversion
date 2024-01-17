@@ -1,0 +1,21 @@
+.most-popular-currency
+{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 15px;
+    padding: 60px 30px;
+}
+.card
+{
+    height: 150px;
+    border-radius: 15px;
+    border: 0.3px solid rgba(71, 71, 71, 0.534);
+    box-shadow: rgba(14, 18, 26, 0.281) 0px 3px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

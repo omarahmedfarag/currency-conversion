@@ -1,0 +1,206 @@
+.home
+{
+    height: 320px;
+    width: 98%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 15px 0px;
+    position: relative;
+}
+.welcome
+{
+    font-size: 25px;
+    font-weight: 800;
+    margin: 0 0 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.welcome button
+{
+    background-color: blue;
+    padding: 12px 17px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.welcome button:hover
+{
+    background-color: rgb(70, 70, 161);
+}
+.exchange-section
+{
+    width: 100%;
+    height: 80%;
+    min-height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px 0px 50px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+.loading-layer
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(43, 43, 43);
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.left
+{
+    height: 100%;
+    width: 38%;
+}
+.right
+{
+    height: 100%;
+    width: 62%;
+}
+
+
+/* ***********let deiv in exchange************* */
+.left
+{
+    padding: 10px 0;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+label
+{
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.left input
+{
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    outline: none;
+    border: 0.5px solid rgb(182, 182, 182);
+    padding: 0 15px;
+    text-align: center;
+    box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+    /* box-shadow: 0px 5px 5px rgba(73, 73, 73, 0.596); */
+    border-radius: 5px;
+}
+.amount-error
+{
+    margin-top: 5px;
+    color: red;
+    display: block;
+}
+
+
+
+
+/* ***************************right div********************** */
+
+.right
+{
+    padding: 10px 20px;
+}
+.currency-dropdown
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+select
+{
+    outline: none;
+    height: 48px;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+    border: 0.5px solid rgb(182, 182, 182);
+}
+.from-section
+{
+    width: 40%;
+}
+.to-section
+{
+    width: 40%;
+}
+.change-icon
+{
+    height: 50px;
+    width: 15%;
+    transition: 2s;
+    
+}
+.change-icon.rotate
+{
+    transform: rotate(180deg);
+}
+.change-icon img
+{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.convert
+{
+    margin: 17px 0;
+}
+.convert-btn
+{
+    background-color: blue;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 12px 0;
+    color: white;
+    cursor: pointer;
+}
+.convert-btn:hover
+{
+    transition: 0.5s;
+    background-color: rgb(49, 49, 250);
+}
+
+.result
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.currency-result
+{
+    border: 1px solid black;
+    padding: 15px 20px;
+    color: rgb(56, 56, 56);
+    text-align: center;
+}
+.result button
+{
+    outline: 0;
+    border: none;
+    background-color: blue;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+}
+.w-100
+{
+    width: 100%;
+}

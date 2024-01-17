@@ -1,0 +1,1 @@
+export let fixerApiKey="651fa7abb12e914f72e8b4b10783a292"

@@ -1,0 +1,61 @@
+<div class="home">
+    <div class="welcome">
+        <span *ngIf="source == 'home'">Currency Exchanger</span>
+        <span *ngIf="source == 'details'">{{currencyFullName}}</span>
+        <button *ngIf="source == 'details'" (click)="navigateToHomePage()">Back to Home</button>
+    </div>
+    <div class="exchange-section">
+        <div class="loading-layer" *ngIf="false">
+
+        </div>
+        <div class="left">
+            <div class="amount">
+                <label for="amount-input">Amount</label>
+                <input type="text" id="amount-input" placeholder="Example : 100 or 100.5" [(ngModel)]="amountValue" (input)="enterAmount($event)">
+                <span *ngIf="showError" class="amount-error">*only numbers are allow</span>
+            </div>
+            <div class="currency-rate">
+                <input type="text"  value="1 EUR = 1.1 USD">
+            </div>
+        </div>
+        <div class="right">
+            <div class="currency-dropdown">
+                <div class="from-section" *ngIf="allData">
+                    <label for="currency-from">From</label>
+                    <select name="from" [(ngModel)]="selectedFromValue" (change)="selectedFrom()">
+                        <option [ngValue]="item.key" *ngFor="let item of allData.symbols | keyvalue">
+                            {{item.key}}
+                        </option>
+                        
+                    </select>
+                </div>
+                <div class="change-icon" [ngClass]="addRotateClass ? 'rotate' : ''" >
+                    <img src="../../../assets/imgs/arro.png" alt="" (click)="swapValues()" >
+                </div>
+                <div class="to-section" *ngIf="allData">
+                    <label for="currency-from">To</label>
+                    <select name="from" id="" [(ngModel)]="selectedToValue" (change)="selectedTo()">
+                        <option [ngValue]="item.key" *ngFor="let item of allData.symbols | keyvalue">
+                            {{item.key}}
+                        </option>
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="convert">
+                <button class="convert-btn" (click)="convert()">Convert</button>
+            </div>
+            <div class="result">
+                <div class="currency-result" [ngClass]=" source =='details'? 'w-100': '' ">
+                    <span *ngIf="result">{{result}}</span> 
+                    <span *ngIf="!result">XX.XX</span> 
+                    {{selectedToValue}}
+                </div>
+                <div class="more-details-btn" *ngIf="source !== 'details'">
+                    <button>More details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <most-popular></most-popular>
+</div>
